@@ -10,7 +10,7 @@
   </head>
   <body>
     <section
-      class="flex flex-col items-center text-sm  bg-cover bg-center bg-no-repeat"
+      class="flex flex-col items-center text-sm bg-cover bg-center bg-no-repeat"
     >
       <div
         class="w-full py-2.5 font-medium text-sm text-white text-center bg-gradient-to-r from-[#4F39F6] to-[#FDFEFF]"
@@ -48,27 +48,31 @@
 
         <div class="hidden md:flex items-center gap-8 transition duration-500">
           <a href="/" class="hover:text-slate-500 transition"> Home </a>
-          <a href="/products" class="hover:text-slate-500 transition">
+          <a href="products.html" class="hover:text-slate-500 transition">
             Products
           </a>
           <a href="/stories" class="hover:text-slate-500 transition">
-            Trending
+            About us
           </a>
           <a href="/pricing" class="hover:text-slate-500 transition">
             Contact us
           </a>
         </div>
 
-        <div class="hidden md:block space-x-3 ">
+        <div class="hidden md:block space-x-3">
           <button
             class="px-6 py-2 bg-indigo-600 cursor-pointer hover:bg-indigo-700 transition text-white rounded-md"
           >
-            Get started
+          <a href="signup.html">
+            Signup
+            </a>
           </button>
           <button
             class="hover:bg-slate-100 transition px-6 cursor-pointer py-2 border border-indigo-600 rounded-md"
           >
+          <a href="login.html">
             Login
+            </a>
           </button>
         </div>
         <button id="open-menu" class="md:hidden active:scale-90 transition">
@@ -96,8 +100,8 @@
       >
         <a href="/"> Home </a>
         <a href="/products"> Products </a>
-        <a href="/stories"> Trending </a>
-        <a href="/pricing"> Contact  </a>
+        <a href="/stories"> About us </a>
+        <a href="/pricing"> Contact </a>
         <button
           id="close-menu"
           class="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-slate-100 hover:bg-slate-200 transition text-black rounded-md flex"
@@ -162,7 +166,7 @@
           <button
             class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white active:scale-95 rounded-lg px-7 h-11"
           >
-            Get started
+            Explore
             <svg
               width="20"
               height="20"
@@ -186,10 +190,111 @@
           </button>
         </div>
       </main>
-    </section>  
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/db.js"></script>
-
   </body>
 </html>
+
+<!-- Categories -->
+ <div>
+  <h2>Categories</h2>
+  <div>{}</div>
+ </div>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+</style>
+
+<h1 class="text-3xl font-medium text-slate-800 text-center mb-2 font-poppins">
+  New Arrivals
+</h1>
+<p class="text-slate-600 mb-10 font-poppins text-center">
+  Explore the latest additions to our collection.
+</p>
+<section class="flex flex-wrap items-center justify-center gap-6">
+  <a href="#" class="group w-56">
+    <img
+      class="rounded-lg w-full group-hover:shadow-xl hover:-translate-y-0.5 duration-300 transition-all h-72 object-cover object-top"
+      src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=500&auto=format&fit=crop"
+      alt="image"
+    />
+    <p class="text-sm mt-2">White crew-Neck T-Shirt</p>
+    <p class="text-xl">$ 29.00</p>
+  </a>
+  <a href="#" class="group w-56">
+    <img
+      class="rounded-lg w-full group-hover:shadow-xl hover:-translate-y-0.5 duration-300 transition-all h-72 object-cover object-right"
+      src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=600&auto=format&fit=crop"
+      alt="image"
+    />
+    <p class="text-sm mt-2">White crew-Neck T-Shirt</p>
+    <p class="text-xl">$ 39.00</p>
+  </a>
+  <a href="#" class="group w-56">
+    <img
+      class="rounded-lg w-full group-hover:shadow-xl hover:-translate-y-0.5 duration-300 transition-all h-72 object-cover object-right"
+      src="https://images.unsplash.com/photo-1608234807905-4466023792f5?q=80&w=735&auto=format&fit=crop"
+      alt="image"
+    />
+    <p class="text-sm mt-2">White crew-Neck T-Shirt</p>
+    <p class="text-xl">$ 29.00</p>
+  </a>
+  <a href="#" class="group w-56">
+    <img
+      class="rounded-lg w-full group-hover:shadow-xl hover:-translate-y-0.5 duration-300 transition-all h-72 object-cover object-right"
+      src="https://images.unsplash.com/photo-1667243038099-b257ab263bfd?q=80&w=687&auto=format&fit=crop"
+      alt="image"
+    />
+    <p class="text-sm mt-2">White crew-Neck T-Shirt</p>
+    <p class="text-xl">$ 49.00</p>
+  </a>
+</section>
+
+<!-- Newsletter -->
+<div class="flex flex-col items-center justify-center text-center space-y-2">
+  <h1 class="md:text-4xl text-2xl font-semibold">Never Miss a Deal!</h1>
+  <p class="md:text-lg text-gray-500/70 pb-8">
+    Subscribe to get the latest offers, new arrivals, and exclusive discounts
+  </p>
+  <form class="flex items-center justify-between max-w-2xl w-full md:h-13 h-12">
+    <input
+      class="border border-gray-300 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
+      type="text"
+      placeholder="Enter your email id"
+      required
+    />
+    <button
+      type="submit"
+      class="md:px-12 px-8 h-full text-white bg-indigo-500 hover:bg-indigo-600 transition-all cursor-pointer rounded-md rounded-l-none"
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-gradient-to-b from-[#1B004D] to-[#2E0A6F] text-white">
+  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+    <div class="flex items-center space-x-3 mb-6">
+      <img
+        alt=""
+        class="h-11"
+        src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/prebuiltuiLogoSquareShape.svg"
+      />
+    </div>
+    <p class="text-center max-w-xl text-sm font-normal leading-relaxed">
+      Empowering creators worldwide with the most advanced AI content creation
+      tools. Transform your ideas into reality.
+    </p>
+  </div>
+  <div class="border-t border-[#3B1A7A]">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal">
+      <a href="https://prebuiltui.com">prebuiltui</a> ©2025. All rights
+      reserved.
+    </div>
+  </div>
+</footer>
