@@ -1,3 +1,5 @@
+import { supabaseClient, handleSignup } from "../assets/js/db.js";
+
 const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
 
@@ -13,8 +15,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmpassword").value;     
-  
+  const confirmPassword = document.getElementById("confirmpassword").value;
 
   if (!validateEmail.test(email)) {
     emailAlerts.innerText = "Please enter a valid email address.";
@@ -26,11 +27,16 @@ form.addEventListener("submit", async (e) => {
       "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.";
     return;
   }
-  passwordAlerts.remove("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.");
+  passwordAlerts.remove(
+    "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.",
+  );
   if (password !== confirmPassword) {
     confirmAlerts.innerText = "Passwords do not match.";
     return;
   }
   confirmAlerts.remove("Passwords do not match.");
-
+  
+  handleSignup(email, password)
+  form.reset();
+ 
 });
