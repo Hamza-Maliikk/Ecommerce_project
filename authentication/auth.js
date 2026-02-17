@@ -1,4 +1,4 @@
-import { supabaseClient, handleSignup } from "../assets/js/db.js";
+import { handleSignup } from "../assets/js/db.js";
 
 const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
@@ -38,5 +38,7 @@ form.addEventListener("submit", async (e) => {
   
   handleSignup(email, password)
   form.reset();
- 
+  window.location.replace('login.html');  
+  
+  
 });
