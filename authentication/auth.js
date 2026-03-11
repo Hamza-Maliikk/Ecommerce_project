@@ -2,8 +2,7 @@ import { handleSignup, handleLogin } from "../assets/js/db.js";
 // signup regex
 const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
-// login regex
-// const LoginvalidateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 const loginForm = document.getElementById("loginform");
 
 // LOGIN
@@ -28,7 +27,7 @@ if (loginForm) {
       loginForm.reset();
       window.location.replace("index.html");
     } catch (error) {
-      console.error("Error logging in:", error);
+      // loginEmailAlerts.innerText("Login failed. Please check your credentials and try again.");
       alert("Login failed. Please check your credentials and try again.");
     }
   });
@@ -66,7 +65,7 @@ if (form) {
     }
     confirmAlerts.remove("Passwords do not match.");
     try {
-      handleSignup(email, password);
+     await handleSignup(email, password);
       form.reset();
       window.location.replace("login.html");
     } catch (error) {

@@ -28,6 +28,6 @@ const { data, error } = await supabaseClient.auth.signInWithPassword({
 });
   
   if (error) { 
-    console.error("Error logging in:", error);  
+   throw new Error(error.message); 
 }
 };
