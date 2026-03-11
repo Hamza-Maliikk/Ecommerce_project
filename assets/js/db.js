@@ -21,7 +21,13 @@ export const handleSignup = async (email, password) => {
 };
 
 // For login user
-const { data, error } = await supabase.auth.signInWithPassword({
+export const handleLogin = async (email, password) => {
+const { data, error } = await supabaseClient.auth.signInWithPassword({
   email: email,
   password: password,
-})
+});
+  
+  if (error) { 
+    console.error("Error logging in:", error);  
+}
+};
